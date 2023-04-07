@@ -1,84 +1,44 @@
-import { useEffect, useState } from "react";
-import API from "../api";
-import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import ChangeSignRoute from "../components/ChangeSignRoute";
+import AuthForm from "../components/AuthForm";
 
-interface ISignUpData {
-  email: string;
-  password: string;
-}
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+`;
 
-interface IValidate {
-  checkEmail: boolean;
-  checkPassword: boolean;
-}
+const SignInWrapper = styled.div`
+  width: 768px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+`;
+
+const Header = styled.div``;
+
+const Title = styled.h2`
+  font-size: 32px;
+`;
 
 const SignIn = () => {
-  const navigate = useNavigate();
-  const [signInData, setSignInData] = useState<ISignUpData>({
-    email: "",
-    password: "",
-  });
-  const [validate, setValidate] = useState<IValidate>({
-    checkEmail: false,
-    checkPassword: true,
-  });
-
-  const emailRegExp = /@/;
-
-  useEffect(() => {
-    checkCredentials();
-  }, [signInData]);
-
-  const checkCredentials = () => {
-    setValidate(() => ({
-      checkPassword: signInData.password.length >= 8,
-      checkEmail: emailRegExp.test(signInData.email),
-    }));
-  };
-
-  const handleSubmit = () => {
-    API.signInMember(signInData).then((res: any) => {
-      localStorage.setItem("access_token", res.data.access_token);
-      navigate("/todo");
-    });
-  };
-
   return (
-    <div>
-      <input
-        data-testid="email-input"
-        type="text"
-        value={signInData.email}
-        onChange={(e) =>
-          setSignInData({
-            ...signInData,
-            email: e.target.value,
-          })
-        }
-      />
-      <p>{validate.checkEmail ? "유효한 이메일" : "유효하지 않은 이메일"}</p>
-      <input
-        data-testid="password-input"
-        type="password"
-        value={signInData.password}
-        onChange={(e) => {
-          setSignInData({
-            ...signInData,
-            password: e.target.value,
-          });
-        }}
-      />
-      <p>
-        {validate.checkPassword ? "유효한 비밀번호" : "유효하지 않은 비밀번호"}
-      </p>
-      <button
-        data-testid="signin-button"
-        disabled={!(validate.checkEmail && validate.checkPassword)}
-        onClick={handleSubmit}
-      >
-        로그인
-      </button>
-    </div>
+    <Container>
+      <SignInWrapper>
+        <Header>
+          <Title>Sign In</Title>
+        </Header>
+        <AuthForm />
+        <ChangeSignRoute />
+      </SignInWrapper>
+    </Container>
   );
 };
 
