@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c7210b-69f7-4948-aa4d-5c188cdcac6f" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/ToDo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/ToDo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/SignIn.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
