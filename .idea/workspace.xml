@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5c7210b-69f7-4948-aa4d-5c188cdcac6f" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/src/routes/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/SignIn.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="b5c7210b-69f7-4948-aa4d-5c188cdcac6f" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +63,7 @@
       <workItem from="1680668950472" duration="20573000" />
       <workItem from="1681093951330" duration="6620000" />
       <workItem from="1681311989244" duration="4352000" />
-      <workItem from="1688632931716" duration="14000" />
+      <workItem from="1688632931716" duration="427000" />
     </task>
     <servers />
   </component>
